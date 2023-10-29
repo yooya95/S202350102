@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config
+3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<!--db연동 sql 작성을 위한 셋팅  -->
+<configuration>
+	<typeAliases>
+		<typeAlias alias="Board"   	type="com.oracle.S202350102.dto.Board"/> 
+	   
+	</typeAliases>
+
+</configuration>
