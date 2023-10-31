@@ -1,10 +1,10 @@
 package com.oracle.S202350102.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.oracle.S202350102.dto.Board;
+
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -14,13 +14,13 @@ import lombok.extern.slf4j.Slf4j;
 @RequiredArgsConstructor
 public class MainController {
 	
-	private final YaController yc;
 	
-	@RequestMapping(value ="index")
+	
+	@RequestMapping(value ="/")
 	public String index() {
 		System.out.println("MainController index Start...");
 		
-		return "redirect:/index.html";
+		return "home";
 	}
 	@RequestMapping(value ="listChallenge")
 	public String listChallenge() {
@@ -40,14 +40,12 @@ public class MainController {
 		
 		return "Sharing";
 	}
-	@RequestMapping(value ="community")
-	public String community(Model model) {
+	
+	@RequestMapping(value ="Community")
+	public String listCommunity() {
 		System.out.println("MainController community Start...");
+
 		
-		Board board = new Board();
-		
-		yc.boardList(board , model);
-		//다른 컨트롤러의 메서드를 호출하고 해당 결과를 반환
 		return "community";
 	}
 	@RequestMapping(value ="notice")

@@ -6,8 +6,8 @@ import lombok.Data;
 
 @Data
 public class Board {
-	private int 	brd_Num; 		// 게시물등록번호
-	private int 	chg_Id; 		// 첼린지등록번호 
+	private int 	brd_num; 		// 게시물등록번호
+	private int 	chg_id; 		// 첼린지등록번호 
 	private int 	user_num;		// 회원번호
 	private int 	brd_lg;		// 분류번호(대분류)
 	private int 	brd_md;		// 분류번호(중분류)
@@ -30,4 +30,8 @@ public class Board {
 	private int 	loc_brd_num;	// 지도목록코드번호
 	private int 	loc_num;		// 지역코드번호
 	
+	
+	
+	//join용 _listCommunity
+	private String 	nick;			// 닉네임
 }
